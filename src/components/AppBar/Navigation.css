@@ -1,0 +1,17 @@
+.AppBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #424141e0;
+    height: 4rem;
+}
+.AppBar > div {
+    font-size: 1.25rem;
+    
+    color: rgba(255, 255, 255, 0.836);
+}
+.AppBar > div:hover{
+    cursor: pointer;
+    color: rgba(199, 195, 195, 0.89);
+}
