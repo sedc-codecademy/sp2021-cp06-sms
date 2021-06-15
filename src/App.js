@@ -41,7 +41,6 @@ const App = () => {
                 onClick = {() => productClickHandler(p.id)}
               />
             </Col>
-
           ))}
         </Row>
       </Container>

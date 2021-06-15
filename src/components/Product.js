@@ -10,12 +10,11 @@ const Product = (props) => {
             <Card.Body>
                 <Card.Title>{props.name}</Card.Title>
                 <Card.Text>
-                    {props.description.length > 150 ? props.description.slice(0, 75) + "..." : props.description}
+                    {props.description.length > 150 ? props.description.slice(0, 75) + "............" : props.description}
                 </Card.Text>
             </Card.Body>
             <Button onClick={props.onClick}variant="primary">Дознај повеќе</Button>
         </Card>
     )
-
 }
 export default Product;
