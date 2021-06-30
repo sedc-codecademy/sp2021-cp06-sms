@@ -1,6 +1,9 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import {Link} from 'react-router-dom'
+import './Product.css'
+
 
 const Product = (props) => {
 
@@ -13,9 +16,11 @@ const Product = (props) => {
                     {props.description.length > 150 ? props.description.slice(0, 75) + "..." : props.description}
                 </Card.Text>
             </Card.Body>
-            <Button onClick={props.onClick}variant="primary">Дознај повеќе</Button>
+            <Link to={`/product/${props.id}`}>
+            <Button className="btn btn-secondary"onClick={props.onClick} variant="primary">Дознај Повеќе</Button>
+            </Link>
+            
         </Card>
     )
-
 }
 export default Product;
