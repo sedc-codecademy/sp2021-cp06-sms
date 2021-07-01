@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import Home from './components/Home'
 import ProductDetail from "./components/ProductDetail";
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -16,7 +17,7 @@ const App = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await fetch(`https://api.punkapi.com/v2/beers?per_page=6`);
+    const response = await fetch(`https://api.punkapi.com/v2/beers?per_page=3`);
     const data = await response.json();
     console.log(data);
     setProducts(data);
@@ -37,8 +38,11 @@ const App = () => {
           <Home products={products}></Home>
         </Route>
       </Switch>
+      <Footer />
       </div>
+
     </Router>
+
   );
 };
 

@@ -13,3 +13,6 @@ code {
     monospace;
 }
 
+.col-md-4 > img {
+  height: 700px;
+}
